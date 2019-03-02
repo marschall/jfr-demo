@@ -1,9 +1,7 @@
 package com.github.marschall.jfrdemo;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.hasSize;
-
-import java.util.List;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -13,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
 import com.github.marschall.jfrdemo.configuration.HibernateConfiguration;
+import com.github.marschall.jfrdemo.entities.ParentEntity;
 import com.github.marschall.junit.jfr.JfrProfiled;
 
 @JfrProfiled
@@ -24,8 +23,10 @@ class HibernateTests {
   private EntityManager entityManager;
 
   @Test
-  void test() {
-    
+  void find() {
+    ParentEntity parent = this.entityManager.find(ParentEntity.class, 1L);
+    assertNotNull(parent);
+    assertEquals(1L, parent.getParentId());
   }
 
 }

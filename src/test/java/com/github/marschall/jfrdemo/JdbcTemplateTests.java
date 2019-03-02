@@ -1,6 +1,6 @@
 package com.github.marschall.jfrdemo;
 
-import static org.hamcrest.Matchers.hasSize;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.List;
 
@@ -12,8 +12,6 @@ import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 import com.github.marschall.jfrdemo.configuration.JdbcTemplateConfiguration;
 import com.github.marschall.junit.jfr.JfrProfiled;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-
 @JfrProfiled
 @SpringJUnitConfig(JdbcTemplateConfiguration.class)
 class JdbcTemplateTests {
@@ -24,7 +22,7 @@ class JdbcTemplateTests {
   @Test
   void queryForList() {
     List<Long> ids = this.jdbcOperations.queryForList("SELECT parent_id FROM parent_entity ORDER BY parent_id", Long.class);
-    assertThat(ids, hasSize(1));
+    assertEquals(List.of(1L), ids);
   }
 
 }
