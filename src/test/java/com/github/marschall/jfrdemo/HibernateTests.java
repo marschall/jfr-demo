@@ -1,5 +1,7 @@
 package com.github.marschall.jfrdemo;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.hasSize;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -27,6 +29,7 @@ class HibernateTests {
     ParentEntity parent = this.entityManager.find(ParentEntity.class, 1L);
     assertNotNull(parent);
     assertEquals(1L, parent.getParentId());
+    assertThat(parent.getChildren(), hasSize(3));
   }
 
 }

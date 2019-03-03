@@ -1,9 +1,10 @@
 package com.github.marschall.jfrdemo.entities;
 
+import static javax.persistence.GenerationType.SEQUENCE;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 
@@ -13,7 +14,7 @@ public class ChildEntity {
   @Id
   @Column(name = "CHILD_ID")
   @GeneratedValue(
-      strategy = GenerationType.SEQUENCE,
+      strategy = SEQUENCE,
       generator = "child-sequence-generator"
   )
   @SequenceGenerator(

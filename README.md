@@ -15,3 +15,9 @@ Print perf counters
 ```
 jcmd 19993 PerfCounter.print
 ```
+
+```
+-XX:StartFlightRecording:filename=recording.jfr
+-XX:FlightRecorderOptions:stackdepth=256
+```
+
