@@ -8,8 +8,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
 import com.github.marschall.jfrjdbctemplate.JfrJdbcOperations;
+import com.github.marschall.jfrjdbctemplate.JfrNamedParameterJdbcOperations;
 
 @Configuration
 @Import(H2Configuration.class)
@@ -20,7 +23,14 @@ public class JdbcTemplateConfiguration {
   
   @Bean
   public JdbcOperations jdbcOperations() {
-    return new JfrJdbcOperations(new JdbcTemplate(this.dataSource));
+    var delegate = new JdbcTemplate(this.dataSource);
+    return new JfrJdbcOperations(delegate);
+  }
+  
+  @Bean
+  public NamedParameterJdbcOperations namedJdbcOperations() {
+    var delegate = new NamedParameterJdbcTemplate(this.jdbcOperations());
+    return new JfrNamedParameterJdbcOperations(delegate);
   }
 
 }
