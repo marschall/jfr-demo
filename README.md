@@ -1,7 +1,7 @@
 JFR Demo
 ========
 
-A demonstration of using JFR events.
+A demonstration of using projects that generate JFR events.
 
 Create a recording
 
