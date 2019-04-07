@@ -28,8 +28,10 @@ class JdbcTemplateTests {
   void queryForListIndexed() {
     List<Long> ids = this.jdbcOperations.queryForList("SELECT parent_id"
         + " FROM parent_entity"
+        + " WHERE parent_id > ?"
         + " ORDER BY parent_id",
-        Long.class);
+        Long.class,
+        0L);
     assertEquals(List.of(1L), ids);
   }
   
