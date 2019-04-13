@@ -17,10 +17,10 @@ import com.github.marschall.junit.jfr.JfrProfiled;
 @JfrProfiled
 @SpringJUnitConfig(JdbcTemplateConfiguration.class)
 class JdbcTemplateTests {
-  
+
   @Autowired
   private JdbcOperations jdbcOperations;
-  
+
   @Autowired
   private NamedParameterJdbcOperations namedOperations;
 
@@ -34,7 +34,7 @@ class JdbcTemplateTests {
         0L);
     assertEquals(List.of(1L), ids);
   }
-  
+
   @Test
   void queryForListNamed() {
     List<Long> ids = this.namedOperations.queryForList("SELECT parent_id"
