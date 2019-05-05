@@ -14,6 +14,7 @@ import java.util.concurrent.CyclicBarrier;
 public class Main {
 
   public static void main(String[] args) {
+    System.out.println("started");
     Runnable[] jobs = new Runnable[] {
         new Sleeper(),
         new FileReader(),
