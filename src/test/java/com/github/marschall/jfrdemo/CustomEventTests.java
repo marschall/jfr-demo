@@ -33,8 +33,8 @@ class CustomEventTests {
   static final class DemoEvent extends Event {
 
 
-    @Label("groupId")
-    @Description("The groupId of the executed project")
+    @Label("message")
+    @Description("The event message")
     private String message;
 
 
