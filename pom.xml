@@ -160,6 +160,7 @@
           <executable>java</executable>
           <arguments>
             <argument>-Xmx1g</argument>
+            <argument>-Xms1g</argument>
             <argument>-classpath</argument>
             <classpath/>
             <argument>com.github.marschall.jfrdemo.Main</argument>
