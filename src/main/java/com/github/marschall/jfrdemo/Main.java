@@ -11,10 +11,13 @@ import java.util.Arrays;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
+import javax.management.JMException;
+
 public class Main {
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws JMException {
     System.out.println("started");
+    Sample.install();
     Runnable[] jobs = new Runnable[] {
         new Sleeper(),
         new FileReader(),
@@ -35,7 +38,7 @@ public class Main {
     @Override
     public void run() {
       try {
-        Thread.sleep(10L);
+        Thread.sleep(100L);
       } catch (InterruptedException e) {
         throw new RuntimeException("interrupted", e);
       }
@@ -61,7 +64,6 @@ public class Main {
       } catch (IOException e) {
         throw new UncheckedIOException(e);
       }
-
     }
 
   }
@@ -81,7 +83,6 @@ public class Main {
       } catch (IOException e) {
         throw new UncheckedIOException(e);
       }
-
     }
 
   }
@@ -143,7 +144,6 @@ public class Main {
       default:
         throw new IllegalStateException("unknown round: " + this.round);
       }
-
     }
 
     private void raiseIndexOutOfBoundsException() {
@@ -184,7 +184,7 @@ public class Main {
         this.counter += 1;
       }
     }
-    
+
     int getCount() {
       synchronized (this.lock) {
         return this.counter;
@@ -220,13 +220,12 @@ public class Main {
           throw new RuntimeException("interrupted", e);
         }
       }
-
     }
 
   }
 
   static final class MemoryChurner implements Runnable {
-    
+
     private Object[] arrays;
     private int run;
 
@@ -248,10 +247,10 @@ public class Main {
         // allocate 1 kb
         this.arrays[i] = new byte[1024];
       }
-      
+
       this.run += 1;
     }
-    
+
   }
 
 }
