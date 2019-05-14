@@ -56,6 +56,9 @@ public class Main {
 
     @Override
     public void run() {
+      if (!Files.exists(this.path)) {
+        return;
+      }
       try (InputStream stream = Files.newInputStream(path)) {
         int b = stream.read();
         if (b == -1) {
@@ -78,6 +81,9 @@ public class Main {
 
     @Override
     public void run() {
+      if (!Files.exists(this.path)) {
+        return;
+      }
       try (OutputStream stream = Files.newOutputStream(path, StandardOpenOption.WRITE)) {
         stream.write(42);
       } catch (IOException e) {
