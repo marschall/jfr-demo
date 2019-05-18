@@ -7,4 +7,12 @@
   </parent>
   <artifactId>jfr-demo-web</artifactId>
   <packaging>war</packaging>
+
+  <dependencies>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 </project>
