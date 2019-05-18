@@ -2,11 +2,12 @@
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.marschall</groupId>
-  <artifactId>jfr-demo</artifactId>
+  <artifactId>jfr-demo-parent</artifactId>
   <version>0.3.0-SNAPSHOT</version>
   <inceptionYear>2019</inceptionYear>
   <name>JFR Demo</name>
   <description>A demonstration of using JFR events.</description>
+  <packaging>pom</packaging>
 
   <url>https://github.com/marschall/jfr-demo</url>
 
@@ -36,114 +37,102 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-
-  <dependencies>
-
-    <!-- Spring -->
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-jdbc</artifactId>
-      <version>${spring.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-core</artifactId>
-      <version>${spring.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-context</artifactId>
-      <version>${spring.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-orm</artifactId>
-      <version>${spring.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-test</artifactId>
-      <version>${spring.version}</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>com.h2database</groupId>
-      <artifactId>h2</artifactId>
-      <version>1.4.199</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-core</artifactId>
-      <version>${hibernate.version}</version>
-      <scope>test</scope>
-    </dependency>
-
-    <!-- JFR -->
-    <dependency>
-      <groupId>com.github.marschall</groupId>
-      <artifactId>junit-jfr</artifactId>
-      <version>0.1.0</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.github.marschall</groupId>
-      <artifactId>hibernate-jfr</artifactId>
-      <version>0.1.0</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.github.marschall</groupId>
-      <artifactId>jfr-jdbctemplate</artifactId>
-      <version>0.4.0</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.github.marschall</groupId>
-      <artifactId>jfr-jdbc</artifactId>
-      <version>0.1.0</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter</artifactId>
-      <version>${junit.jupiter.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.hamcrest</groupId>
-      <artifactId>hamcrest-junit</artifactId>
-      <version>2.0.0.0</version>
-      <scope>test</scope>
-    </dependency>
-
-    <!-- logging -->
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-core</artifactId>
-      <version>${log4j.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-slf4j-impl</artifactId>
-      <version>${log4j.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-jcl</artifactId>
-      <version>${log4j.version}</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+  
+  <dependencyManagement>
+    <dependencies>
+  
+      <!-- Spring -->
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>${spring.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-orm</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+  
+      <dependency>
+        <groupId>com.h2database</groupId>
+        <artifactId>h2</artifactId>
+        <version>1.4.199</version>
+      </dependency>
+  
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>${hibernate.version}</version>
+        <scope>test</scope>
+      </dependency>
+  
+      <!-- JFR -->
+      <dependency>
+        <groupId>com.github.marschall</groupId>
+        <artifactId>junit-jfr</artifactId>
+        <version>0.1.0</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.marschall</groupId>
+        <artifactId>hibernate-jfr</artifactId>
+        <version>0.1.0</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.marschall</groupId>
+        <artifactId>jfr-jdbctemplate</artifactId>
+        <version>0.4.0</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.marschall</groupId>
+        <artifactId>jfr-jdbc</artifactId>
+        <version>0.1.0</version>
+      </dependency>
+  
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>${junit.jupiter.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.hamcrest</groupId>
+        <artifactId>hamcrest-junit</artifactId>
+        <version>2.0.0.0</version>
+      </dependency>
+  
+      <!-- logging -->
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-core</artifactId>
+        <version>${log4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-slf4j-impl</artifactId>
+        <version>${log4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-jcl</artifactId>
+        <version>${log4j.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <build>
     <plugins>
@@ -151,30 +140,6 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
           <release>11</release>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
-        <configuration>
-          <executable>java</executable>
-          <arguments>
-            <argument>-Xmx1g</argument>
-            <argument>-Xms1g</argument>
-            <argument>-classpath</argument>
-            <classpath/>
-            <argument>com.github.marschall.jfrdemo.Main</argument>
-          </arguments>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-jar-plugin</artifactId>
-        <configuration>
-          <archive>
-            <manifest>
-              <mainClass>com.github.marschall.jfrdemo.Main</mainClass>
-            </manifest>
-          </archive>
         </configuration>
       </plugin>
       <plugin>
@@ -195,6 +160,10 @@
     <pluginManagement>
       <plugins>
         <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.8.0</version>
         </plugin>
@@ -202,6 +171,14 @@
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>exec-maven-plugin</artifactId>
           <version>1.6.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.1.1</version>
         </plugin>
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
@@ -212,20 +189,12 @@
           <version>3.0.1</version>
         </plugin>
         <plugin>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>3.1.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-install-plugin</artifactId>
-          <version>2.5.2</version>
-        </plugin>
-        <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
         </plugin>
         <plugin>
-          <artifactId>maven-clean-plugin</artifactId>
-          <version>3.1.0</version>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.2.2</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -240,5 +209,9 @@
     <log4j.version>2.11.2</log4j.version>
   </properties>
 
+  <modules>
+    <module>jfr-demo</module>
+    <module>jfr-demo-web</module>
+  </modules>
 </project>
 
