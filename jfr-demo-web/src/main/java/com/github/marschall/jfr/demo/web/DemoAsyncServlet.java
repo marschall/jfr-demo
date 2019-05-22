@@ -2,7 +2,7 @@ package com.github.marschall.jfr.demo.web;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.time.OffsetDateTime;
+import java.time.OffsetTime;
 import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -96,7 +96,7 @@ public class DemoAsyncServlet extends HttpServlet {
     @Override
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
       PrintWriter writer = resp.getWriter();
-      writer.append(OffsetDateTime.now().toString());
+      writer.append(OffsetTime.now().toString());
       writer.append("\r\n");
       resp.flushBuffer();
     }
