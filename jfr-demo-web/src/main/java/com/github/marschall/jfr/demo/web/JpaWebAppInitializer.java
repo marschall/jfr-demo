@@ -8,6 +8,9 @@ import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
+import com.github.marschall.jfr.demo.web.configuration.ApplicationConfiguration;
+import com.github.marschall.jfr.demo.web.configuration.DispatcherConfiguration;
+
 public class JpaWebAppInitializer implements WebApplicationInitializer {
 
     @Override

@@ -1,4 +1,4 @@
-package com.github.marschall.jfr.demo.web;
+package com.github.marschall.jfr.demo.web.configuration;
 
 import org.springframework.context.annotation.Configuration;
 
