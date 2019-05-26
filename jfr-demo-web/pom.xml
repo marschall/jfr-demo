@@ -38,6 +38,20 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
     </dependency>
+
+    <!-- JFR -->
+    <dependency>
+      <groupId>com.github.marschall</groupId>
+      <artifactId>hibernate-jfr</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.github.marschall</groupId>
+      <artifactId>jfr-jdbctemplate</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.github.marschall</groupId>
+      <artifactId>jfr-jdbc</artifactId>
+    </dependency>
   </dependencies>
   
   <build>
