@@ -75,6 +75,11 @@
       <artifactId>junit-jupiter</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest-junit</artifactId>
+      <scope>test</scope>
+    </dependency>
 
     <!-- logging -->
     <dependency>
