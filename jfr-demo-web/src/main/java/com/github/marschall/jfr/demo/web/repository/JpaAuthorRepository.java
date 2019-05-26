@@ -1,4 +1,4 @@
-package com.github.marschall.jfr.demo.web.repositoryy;
+package com.github.marschall.jfr.demo.web.repository;
 
 import java.util.ArrayList;
 import java.util.List;

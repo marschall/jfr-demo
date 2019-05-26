@@ -1,4 +1,4 @@
-package com.github.marschall.jfr.demo.web;
+package com.github.marschall.jfr.demo.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,10 +17,10 @@ public class JpaController {
   }
 
   @GetMapping("/")
-  public AuthorsViewModel greeting(Model model) {
+  public String greeting(Model model) {
     AuthorsViewModel authorModel = this.autorService.loadModel();
     model.addAttribute("authorModel", authorModel);
-    return authorModel;
+    return "authors";
   }
 
 }

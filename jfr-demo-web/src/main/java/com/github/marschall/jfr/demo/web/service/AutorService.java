@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.github.marschall.jfr.demo.web.model.AuthorsViewModel;
-import com.github.marschall.jfr.demo.web.repositoryy.AuthorRepository;
+import com.github.marschall.jfr.demo.web.repository.AuthorRepository;
 
 @Service
 public class AutorService {
