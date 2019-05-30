@@ -96,10 +96,26 @@
         <version>2.3.28</version>
       </dependency>
 
+      <!-- Java EE -->
       <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>javax.servlet-api</artifactId>
         <version>4.0.1</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.annotation</groupId>
+        <artifactId>javax.annotation-api</artifactId>
+        <version>1.3.2</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.interceptor</groupId>
+        <artifactId>javax.interceptor-api</artifactId>
+        <version>1.2.2</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.ejb</groupId>
+        <artifactId>javax.ejb-api</artifactId>
+        <version>3.2.2</version>
       </dependency>
   
       <!-- JFR -->
@@ -123,7 +139,13 @@
         <artifactId>jfr-jdbc</artifactId>
         <version>0.1.0</version>
       </dependency>
+      <dependency>
+        <groupId>com.github.marschall</groupId>
+        <artifactId>jfr-ejb</artifactId>
+        <version>0.1.0-SNAPSHOT</version>
+      </dependency>
   
+      <!-- testing -->
       <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter</artifactId>
@@ -237,6 +259,7 @@
   <modules>
     <module>jfr-demo</module>
     <module>jfr-demo-web</module>
+    <module>jfr-demo-ejb</module>
   </modules>
 </project>
 
