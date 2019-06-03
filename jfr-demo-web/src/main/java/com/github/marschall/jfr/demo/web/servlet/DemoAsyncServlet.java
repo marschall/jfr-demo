@@ -1,4 +1,4 @@
-package com.github.marschall.jfr.demo.web;
+package com.github.marschall.jfr.demo.web.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
