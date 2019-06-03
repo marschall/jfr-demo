@@ -7,11 +7,11 @@ import com.github.marschall.jfr.demo.web.model.AuthorsViewModel;
 import com.github.marschall.jfr.demo.web.repository.AuthorRepository;
 
 @Service
-public class AutorService {
+public class AuthorService {
 
   private final AuthorRepository repository;
 
-  public AutorService(AuthorRepository repository) {
+  public AuthorService(AuthorRepository repository) {
     this.repository = repository;
   }
 

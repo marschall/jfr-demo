@@ -5,14 +5,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.github.marschall.jfr.demo.web.model.AuthorsViewModel;
-import com.github.marschall.jfr.demo.web.service.AutorService;
+import com.github.marschall.jfr.demo.web.service.AuthorService;
 
 @Controller
 public class JpaController {
 
-  private final AutorService autorService;
+  private final AuthorService autorService;
 
-  public JpaController(AutorService autorService) {
+  public JpaController(AuthorService autorService) {
     this.autorService = autorService;
   }
 

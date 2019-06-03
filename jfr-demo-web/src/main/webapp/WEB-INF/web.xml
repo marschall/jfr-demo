@@ -7,7 +7,7 @@
   
   <servlet>
     <servlet-name>DemoAsyncServlet</servlet-name>
-    <servlet-class>com.github.marschall.jfr.demo.web.DemoAsyncServlet</servlet-class>
+    <servlet-class>com.github.marschall.jfr.demo.web.servlet.DemoAsyncServlet</servlet-class>
     <async-supported>true</async-supported>
   </servlet>
 

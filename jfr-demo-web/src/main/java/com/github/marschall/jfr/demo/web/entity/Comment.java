@@ -20,7 +20,8 @@ public class Comment {
   )
   @SequenceGenerator(
       name = "comment-sequence-generator",
-      sequenceName = "COMMENT_ID"
+      sequenceName = "COMMENT_ID",
+      allocationSize = 1
   )
   private Integer id;
 

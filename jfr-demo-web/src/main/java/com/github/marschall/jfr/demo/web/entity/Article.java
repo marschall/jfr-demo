@@ -24,7 +24,8 @@ public class Article {
   )
   @SequenceGenerator(
       name = "article-sequence-generator",
-      sequenceName = "ARTICLE_ID"
+      sequenceName = "ARTICLE_ID",
+      allocationSize = 1
   )
   private Integer id;
 

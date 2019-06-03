@@ -23,7 +23,8 @@ public class Author {
   )
   @SequenceGenerator(
       name = "author-sequence-generator",
-      sequenceName = "AUTHOR_ID"
+      sequenceName = "AUTHOR_ID",
+      allocationSize = 1
   )
   private Integer id;
 
