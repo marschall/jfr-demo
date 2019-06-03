@@ -10,6 +10,8 @@ import org.springframework.web.servlet.DispatcherServlet;
 
 import com.github.marschall.jfr.demo.web.configuration.ApplicationConfiguration;
 import com.github.marschall.jfr.demo.web.configuration.DispatcherConfiguration;
+import com.github.marschall.jfr.demo.web.configuration.H2Configuration;
+import com.github.marschall.jfr.demo.web.configuration.HibernateConfiguration;
 
 public class JpaWebAppInitializer implements WebApplicationInitializer {
 
@@ -19,6 +21,8 @@ public class JpaWebAppInitializer implements WebApplicationInitializer {
       AnnotationConfigWebApplicationContext rootContext =
         new AnnotationConfigWebApplicationContext();
       rootContext.register(ApplicationConfiguration.class);
+      rootContext.register(H2Configuration.class);
+      rootContext.register(HibernateConfiguration.class);
 
       // Manage the lifecycle of the root application context
       container.addListener(new ContextLoaderListener(rootContext));

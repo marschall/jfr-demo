@@ -15,6 +15,10 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
+      <groupId>com.github.marschall</groupId>
+      <artifactId>hibernate-jfr</artifactId>
+    </dependency>
+    <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
     </dependency>
