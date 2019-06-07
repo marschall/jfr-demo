@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 
-import com.github.marschall.jfr.demo.web.controller.JpaController;
+import com.github.marschall.jfr.demo.web.controller.AuthorController;
 import com.github.marschall.jfr.demo.web.service.AuthorService;
 
 @EnableWebMvc
@@ -18,8 +18,8 @@ public class DispatcherConfiguration implements WebMvcConfigurer {
   private AuthorService autorService;
   
   @Bean
-  public JpaController jpaController() {
-    return new JpaController(autorService);
+  public AuthorController jpaController() {
+    return new AuthorController(autorService);
   }
 
   @Override
