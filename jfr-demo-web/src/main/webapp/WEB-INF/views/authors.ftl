@@ -6,10 +6,11 @@
   <body>
   <#list authorModel.entries>
     <table>
+    <caption>Authors</caption>
       <tr>
-       <th>Author</ht>
-       <th>Articles</ht>
-       <th>Comments</ht>
+       <th>Author</th>
+       <th>Articles</th>
+       <th>Comments</th>
       </tr>
     <#items as author>
       <tr>
