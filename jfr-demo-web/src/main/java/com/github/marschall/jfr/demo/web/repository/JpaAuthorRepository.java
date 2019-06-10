@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 import com.github.marschall.jfr.demo.web.entity.Author;
 import com.github.marschall.jfr.demo.web.model.AuthorsViewModel;
@@ -20,7 +21,11 @@ public class JpaAuthorRepository implements AuthorRepository {
   @Override
   public AuthorsViewModel loadModel() {
     List<AuthorsViewModelEntry> entries = new ArrayList<>();
-    for (Object each : this.entityManager.createQuery("SELECT a FROM Author a").getResultList()) {
+    Query authorQuery = this.entityManager.createQuery(
+            "SELECT a "
+            + " FROM Author a"
+            + " ORDER BY a.id ASC");
+    for (Object each : authorQuery.getResultList()) {
       Author author = (Author) each;
       int articleCount = author.getArticles().size();
       int commentCount = author.getArticles().stream()

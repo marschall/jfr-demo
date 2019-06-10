@@ -4,7 +4,7 @@
     <title>Authors</title>
   </head>
   <body>
-  <h2>Authors</h2>
+  <h2>Author Statistics</h2>
   <#list authorModel.getEntries()>
     <table>
     <caption>Authors</caption>
@@ -22,8 +22,5 @@
     </#items>
     </table>
   </#list>
-    <#list authorModel.getEntries() as unit>
-    do stuff with ${unit}
-    </#list>
   </body>
 </html>

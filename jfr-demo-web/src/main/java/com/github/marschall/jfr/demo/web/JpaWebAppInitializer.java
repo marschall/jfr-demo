@@ -1,5 +1,7 @@
 package com.github.marschall.jfr.demo.web;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletRegistration.Dynamic;
 
@@ -16,15 +18,24 @@ import com.github.marschall.jfr.demo.web.configuration.JpaRepositoryConfiguratio
 
 public class JpaWebAppInitializer implements WebApplicationInitializer {
 
+  private static final AtomicInteger SERVLET_COUNT = new AtomicInteger();
+
   @Override
   public void onStartup(ServletContext container) {
+    registerController(container, HibernateConfiguration.class, JpaRepositoryConfiguration.class, "/jpa/*");
+//    registerController(container, JdbcTemplateConfiguration.class, JdbcRepositoryConfiguration.class, "/jdbc/*");
+  }
+
+  private static void registerController(ServletContext container,
+          Class<?> persistenceConfiguration, Class<?> repositoryConfiguration,
+          String urlPattern) {
     // Create the 'root' Spring application context
     AnnotationConfigWebApplicationContext rootContext =
         new AnnotationConfigWebApplicationContext();
     rootContext.register(ApplicationConfiguration.class);
     rootContext.register(H2Configuration.class);
-    rootContext.register(HibernateConfiguration.class);
-    rootContext.register(JpaRepositoryConfiguration.class);
+    rootContext.register(persistenceConfiguration);
+    rootContext.register(repositoryConfiguration);
 
     // Manage the lifecycle of the root application context
     container.addListener(new ContextLoaderListener(rootContext));
@@ -34,11 +45,9 @@ public class JpaWebAppInitializer implements WebApplicationInitializer {
         new AnnotationConfigWebApplicationContext();
     dispatcherContext.register(DispatcherConfiguration.class);
 
-    // Register and map the dispatcher servlet
-    Dynamic dispatcher =
-        container.addServlet("dispatcher", new DispatcherServlet(dispatcherContext));
-    //      dispatcher.setLoadOnStartup(1);
-    dispatcher.addMapping("/jpa/*");
+    Dynamic dispatcher = container.addServlet("dispatcher-" + SERVLET_COUNT.incrementAndGet(), new DispatcherServlet(dispatcherContext));
+    dispatcher.addMapping(urlPattern);
+
   }
 
 }

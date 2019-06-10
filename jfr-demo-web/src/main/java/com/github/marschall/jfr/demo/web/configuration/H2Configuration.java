@@ -25,6 +25,7 @@ public class H2Configuration {
         .setName("H2-" + COUNT.incrementAndGet())
         .setType(H2)
         .addScript("h2-schema.sql")
+        .addScript("h2-data.sql")
         .build();
   }
 
