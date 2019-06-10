@@ -16,7 +16,7 @@ public class AuthorController {
     this.autorService = autorService;
   }
 
-  @GetMapping("/")
+  @GetMapping(path = "/authors", produces = "text/html;charset=UTF-8")
   public String greeting(Model model) {
     AuthorsViewModel authorModel = this.autorService.loadModel();
     model.addAttribute("authorModel", authorModel);

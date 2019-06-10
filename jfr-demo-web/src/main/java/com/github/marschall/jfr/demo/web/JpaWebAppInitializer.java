@@ -38,7 +38,7 @@ public class JpaWebAppInitializer implements WebApplicationInitializer {
     Dynamic dispatcher =
         container.addServlet("dispatcher", new DispatcherServlet(dispatcherContext));
     //      dispatcher.setLoadOnStartup(1);
-    dispatcher.addMapping("/jpa");
+    dispatcher.addMapping("/jpa/*");
   }
 
 }

@@ -15,5 +15,12 @@
     <servlet-name>DemoAsyncServlet</servlet-name>
     <url-pattern>/async/*</url-pattern>
   </servlet-mapping>
+  
+  <request-character-encoding>UTF-8</request-character-encoding>
+  <response-character-encoding>UTF-8</response-character-encoding>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
 
 </web-app>

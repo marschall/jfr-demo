@@ -16,10 +16,10 @@ public class DispatcherConfiguration implements WebMvcConfigurer {
 
   @Autowired
   private AuthorService autorService;
-  
+
   @Bean
   public AuthorController jpaController() {
-    return new AuthorController(autorService);
+    return new AuthorController(this.autorService);
   }
 
   @Override
@@ -40,6 +40,7 @@ public class DispatcherConfiguration implements WebMvcConfigurer {
     resolver.setCache(true);
     resolver.setPrefix("");
     resolver.setSuffix(".ftl");
+    resolver.setCacheLimit(16);
     return resolver;
   }
 
