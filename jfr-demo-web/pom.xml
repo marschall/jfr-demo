@@ -65,6 +65,11 @@
       <groupId>com.github.marschall</groupId>
       <artifactId>jfr-jdbc</artifactId>
     </dependency>
+    <dependency>
+      <groupId>com.github.marschall</groupId>
+      <artifactId>jfr-servlet</artifactId>
+      <scope>runtime</scope>
+    </dependency>
   </dependencies>
   
   <build>

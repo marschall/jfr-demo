@@ -8,11 +8,11 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabase;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
-import com.github.marschall.jfrjdbc.JfrDataSource;
+import com.github.marschall.jfr.jdbc.JfrDataSource;
 
 @Configuration
 public class H2Configuration {
-  
+
   @Bean
   public DataSource dataSource() {
     EmbeddedDatabase embeddedDatabase = new EmbeddedDatabaseBuilder()
