@@ -19,5 +19,6 @@ jcmd 19993 PerfCounter.print
 
 ```
 export MAVEN_OPTS="-XX:StartFlightRecording:filename=recording.jfr,settings=$(pwd)/src/main/resources/Zulu_Profiling.jfc -XX:FlightRecorderOptions:stackdepth=256"
+mvn -pl jfr-demo -am clean test
 ```
 
