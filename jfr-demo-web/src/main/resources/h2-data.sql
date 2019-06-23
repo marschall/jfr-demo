@@ -15,6 +15,6 @@ CROSS JOIN AUTHOR a;
 -- comment
 INSERT INTO COMMENT (ID,                    COMMENT,           PUBLISHED_AT,        ARTICLE_ID)
     SELECT           NEXTVAL('COMMENT_ID'), 'Comment ' || c.x, CURRENT_TIMESTAMP(), a.ID
-      FROM SYSTEM_RANGE(1, 100) c
+      FROM SYSTEM_RANGE(1, 200) c
 CROSS JOIN ARTICLE a;
 
