@@ -23,6 +23,20 @@ run the Web demo
 mvn -pl jfr-demo-web -am jetty:run
 ```
 
+dumping
+
+```
+jcmd 99776 JFR.dump filename=dumped.jfr
+```
+
+the advertised
+
+```
+jcmd 99776 JFR.dump name=1
+```
+
+does not work because of [JDK-8220657](https://bugs.openjdk.java.net/browse/JDK-8220657)
+
 
 ## Running JFR in General
 
