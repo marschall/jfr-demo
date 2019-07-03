@@ -16,6 +16,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.SingleConnectionDataSource;
 
+import com.github.marschall.jfr.jdbc.JfrDataSource;
+
 @Configuration
 public class H2Configuration {
 
@@ -39,7 +41,7 @@ public class H2Configuration {
     } catch (SQLException | IOException e) {
       throw new BeanCreationException("dataSource", "could not create data source", e);
     }
-    return dataSource;
+    return new JfrDataSource(dataSource);
   }
 
   private static String getDatabasePath() {
