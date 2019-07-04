@@ -11,10 +11,10 @@ import com.github.marschall.jfr.demo.web.service.AuthorService;
 @Configuration
 @EnableTransactionManagement
 public class ApplicationConfiguration {
-  
+
   @Autowired
   private AuthorRepository authorRepository;
-  
+
   @Bean
   public AuthorService authorService() {
     return new AuthorService(this.authorRepository);

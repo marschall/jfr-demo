@@ -16,7 +16,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 @Configuration
 @Import(H2Configuration.class)
 public class HibernateConfiguration {
-  
+
   @Autowired
   private DataSource dataSource;
 
@@ -27,10 +27,10 @@ public class HibernateConfiguration {
     bean.setPersistenceUnitName("h2");
     bean.setJpaDialect(new HibernateJpaDialect());
     bean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
-    bean.setDataSource(dataSource);
+    bean.setDataSource(this.dataSource);
     return bean;
   }
-  
+
   @Bean
   public PlatformTransactionManager txManager(EntityManagerFactory emf) {
     return new JpaTransactionManager(emf);
