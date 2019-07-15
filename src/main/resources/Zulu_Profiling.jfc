@@ -421,31 +421,31 @@
   </event>
 
   <event name="jdk.CompilerConfiguration">
-    <setting name="enabled">true</setting>
+    <setting name="enabled">false</setting>
     <setting name="period">beginChunk</setting>
   </event>
 
   <event name="jdk.CompilerStatistics">
-    <setting name="enabled">true</setting>
+    <setting name="enabled">false</setting>
     <setting name="period">1000 ms</setting>
   </event>
 
   <event name="jdk.Compilation">
-    <setting name="enabled">true</setting>
+    <setting name="enabled">false</setting>
     <setting name="threshold">100 ms</setting>
   </event>
 
   <event name="jdk.CompilerPhase">
-    <setting name="enabled">true</setting>
+    <setting name="enabled">false</setting>
     <setting name="threshold">10 s</setting>
   </event>
 
   <event name="jdk.CompilationFailure">
-    <setting name="enabled">true</setting>
+    <setting name="enabled">false</setting>
   </event>
 
   <event name="jdk.CompilerInlining">
-    <setting name="enabled">true</setting>
+    <setting name="enabled">false</setting>
   </event>
 
   <event name="jdk.CodeSweeperConfiguration">
