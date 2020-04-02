@@ -11,6 +11,7 @@
 
     <properties>
       <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
+      <property name="hibernate.session_factory.statement_inspector" value="com.github.marschall.hibernate.jfr.JfrStatementInspector" />
     </properties>
   </persistence-unit>
 
