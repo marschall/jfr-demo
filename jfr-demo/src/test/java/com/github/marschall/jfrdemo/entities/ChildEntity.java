@@ -28,7 +28,7 @@ public class ChildEntity {
   private Long parentId;
 
   public Long getChildId() {
-    return childId;
+    return this.childId;
   }
 
   public void setChildId(Long childId) {
@@ -36,7 +36,7 @@ public class ChildEntity {
   }
 
   public Long getParentId() {
-    return parentId;
+    return this.parentId;
   }
 
   public void setParentId(Long parentId) {

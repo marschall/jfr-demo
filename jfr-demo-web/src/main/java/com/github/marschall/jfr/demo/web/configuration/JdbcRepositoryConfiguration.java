@@ -10,10 +10,10 @@ import com.github.marschall.jfr.demo.web.repository.JdbcAuthorRepository;
 
 @Configuration
 public class JdbcRepositoryConfiguration {
-  
+
   @Autowired
   private JdbcOperations jdbcOperations;
-  
+
   @Bean
   public AuthorRepository authorRepository() {
     return new JdbcAuthorRepository(this.jdbcOperations);

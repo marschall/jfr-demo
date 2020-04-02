@@ -1,9 +1,46 @@
-JFR Demo
-========
+# JFR Demo
 
 A demonstration of using projects that generate JFR events.
 
-Create a recording
+## Running the Included Demos
+
+
+set the Maven options
+
+```
+export MAVEN_OPTS="-XX:StartFlightRecording:filename=recording.jfr,settings=$(pwd)/src/main/resources/Zulu_Profiling.jfc -XX:FlightRecorderOptions:stackdepth=256"
+```
+
+run the Maven demo
+
+```
+mvn -pl jfr-demo -am clean test
+```
+
+run the Web demo
+
+```
+mvn -pl jfr-demo-web -am jetty:run
+```
+
+dumping
+
+```
+jcmd 99776 JFR.dump filename=dumped.jfr
+```
+
+the advertised
+
+```
+jcmd 99776 JFR.dump name=1
+```
+
+does not work because of [JDK-8220657](https://bugs.openjdk.java.net/browse/JDK-8220657)
+
+
+## Running JFR in General
+
+create a recording
 
 ```
 jcmd 19993 JFR.configure stackdepth=256
@@ -11,14 +48,9 @@ jcmd 19993 JFR.start name=\"Zulu Recording\" settings=${HOME}/git/jfr-demo/src/m
 jcmd 19993 JFR.stop name=\"Zulu Recording\" filename=${HOME}/git/jfr-demo/src/main/resources/Zulu_Recording2.jfr
 ```
 
-Print perf counters
+print perf counters
 
 ```
 jcmd 19993 PerfCounter.print
-```
-
-```
-export MAVEN_OPTS="-XX:StartFlightRecording:filename=recording.jfr,settings=$(pwd)/src/main/resources/Zulu_Profiling.jfc -XX:FlightRecorderOptions:stackdepth=256"
-mvn -pl jfr-demo -am clean test
 ```
 

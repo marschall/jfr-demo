@@ -20,7 +20,7 @@ import com.github.marschall.junit.jfr.JfrProfiled;
 @Transactional
 @SpringJUnitConfig(HibernateConfiguration.class)
 class HibernateTests {
-  
+
   @PersistenceContext
   private EntityManager entityManager;
 

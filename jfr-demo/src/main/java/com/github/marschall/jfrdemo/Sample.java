@@ -7,7 +7,7 @@ import javax.management.MBeanServer;
 import javax.management.ObjectName;
 
 public class Sample implements SampleMXBean {
-  
+
   private static final String OBJECT_NAME = "com.github.marschall.jfrdemo:type=Sample";
 
   @Override

@@ -11,10 +11,10 @@ import com.github.marschall.jfr.demo.web.repository.JpaAuthorRepository;
 
 @Configuration
 public class JpaRepositoryConfiguration {
-  
+
   @PersistenceContext
   private EntityManager entityManager;
-  
+
   @Bean
   public AuthorRepository authorRepository() {
     return new JpaAuthorRepository(this.entityManager);

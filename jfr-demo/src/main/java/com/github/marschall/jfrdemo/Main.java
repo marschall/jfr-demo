@@ -59,7 +59,7 @@ public class Main {
       if (!Files.exists(this.path)) {
         return;
       }
-      try (InputStream stream = Files.newInputStream(path)) {
+      try (InputStream stream = Files.newInputStream(this.path)) {
         int b = stream.read();
         if (b == -1) {
           System.out.println(this.path + " is empty");
@@ -84,7 +84,7 @@ public class Main {
       if (!Files.exists(this.path)) {
         return;
       }
-      try (OutputStream stream = Files.newOutputStream(path, StandardOpenOption.WRITE)) {
+      try (OutputStream stream = Files.newOutputStream(this.path, StandardOpenOption.WRITE)) {
         stream.write(42);
       } catch (IOException e) {
         throw new UncheckedIOException(e);
@@ -116,10 +116,10 @@ public class Main {
     public void run() {
       boolean thrown = false;
       try {
-        raiseException();
+        this.raiseException();
       } catch (RuntimeException e) {
         thrown = true;
-        incrementRound();
+        this.incrementRound();
       }
       if (!thrown) {
         throw new IllegalStateException("no exception thrown");
@@ -136,16 +136,16 @@ public class Main {
     private void raiseException() {
       switch (this.round) {
       case 0:
-        raiseIndexOutOfBoundsException();
+        this.raiseIndexOutOfBoundsException();
         break;
       case 1:
-        raiseNullPointerException();
+        this.raiseNullPointerException();
         break;
       case 2:
-        raiseStringIndexOutOfBoundsException();
+        this.raiseStringIndexOutOfBoundsException();
         break;
       case 3:
-        raiseIllegalArgumentException();
+        this.raiseIllegalArgumentException();
         break;
       default:
         throw new IllegalStateException("unknown round: " + this.round);
@@ -212,7 +212,7 @@ public class Main {
             e.printStackTrace(System.err);
             return;
           }
-          incrementCount();
+          this.incrementCount();
         }, "runner thread: " + this.threadCount++ + "/" + this.getCount());
         threads[i] = thread;
       }
@@ -232,7 +232,7 @@ public class Main {
 
   static final class MemoryChurner implements Runnable {
 
-    private Object[] arrays;
+    private final Object[] arrays;
     private int run;
 
     MemoryChurner() {

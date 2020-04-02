@@ -15,7 +15,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 @Configuration
 public class HibernateConfiguration {
- 
+
   @Autowired
   private DataSource dataSource;
 

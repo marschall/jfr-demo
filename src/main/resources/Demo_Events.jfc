@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration version="2.0" label="Demo_Events" description="Low overhead configuration for profiling, typically around 2 % overhead." provider="Oracle">
+
+<!-- 
+  <event name="com.github.marschall.catalina.jfr.JfrValve$HttpEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.catalina.jfr.JfrValve$RelatedHttpEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.hibernate.jfr.JfrListener$JfrLockEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.hibernate.jfr.JfrListener$JfrResolveNaturalIdEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.hibernate.jfr.JfrListener$JfrReplicateEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.hibernate.jfr.JfrListener$JfrRefreshEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.hibernate.jfr.JfrListener$JfrLoadEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.hibernate.jfr.JfrListener$JfrMergeEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.hibernate.jfr.JfrListener$JfrSaveOrUpdateEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.hibernate.jfr.JfrListener$JfrDeleteEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.hibernate.jfr.JfrListener$JfrPersistEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.hibernate.jfr.JfrListener$JfrFlushEntityEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.hibernate.jfr.JfrListener$JfrFlushEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.hibernate.jfr.JfrListener$JfrAutoFlushEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.hibernate.jfr.JfrListener$JfrDirtyCheckEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.hibernate.jfr.JfrListener$JfrClearEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.hibernate.jfr.JfrListener$JfrEvictEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name=com.github.marschall.jetty.jfr.JfrHandler$HttpEvent>
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.jetty.jfr.JfrHandler$RelatedHttpEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.jfr.ejb.JfrInterceptor$EjbEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.jfr.jdbc.JdbcObjectEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.jfr.jdbc.JdbcOperationEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.jfr.jdbc.JdbcSavepointEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.jfr.jdbctemplate.JfrJdbcOperations$JdbcEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.jfr.jdbctemplate.JfrNamedParameterJdbcOperations$JdbcNamedEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.maven.jfr.JfrEventListener$MojoEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.maven.jfr.JfrEventListener$ProjectEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.jfr.resttemplate.JfrRestOperations$RestEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.junit.jfr.JfrExtension$BeforeAllExecutionEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.junit.jfr.JfrExtension$BeforeEachExecutionEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.junit.jfr.JfrExtension$TestExecutionEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.junit.jfr.JfrExtension$AfterEachExecutionEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.junit.jfr.JfrExtension$AfterAllExecutionEvent">
+    <setting name="enabled">true</setting>
+  </event>
+
+  <event name="com.github.marschall.junit4.jfr.JfrMethodRule$TestExecutionEvent">
+    <setting name="enabled">true</setting>
+  </event>
+ -->
+
+</configuration>

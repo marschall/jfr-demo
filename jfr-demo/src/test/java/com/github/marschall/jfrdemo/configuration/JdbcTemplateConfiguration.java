@@ -17,16 +17,16 @@ import com.github.marschall.jfrjdbctemplate.JfrNamedParameterJdbcOperations;
 @Configuration
 @Import(H2Configuration.class)
 public class JdbcTemplateConfiguration {
-  
+
   @Autowired
   private DataSource dataSource;
-  
+
   @Bean
   public JdbcOperations jdbcOperations() {
     var delegate = new JdbcTemplate(this.dataSource);
     return new JfrJdbcOperations(delegate);
   }
-  
+
   @Bean
   public NamedParameterJdbcOperations namedJdbcOperations() {
     var delegate = new NamedParameterJdbcTemplate(this.jdbcOperations());

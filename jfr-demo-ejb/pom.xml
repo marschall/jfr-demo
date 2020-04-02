@@ -43,6 +43,11 @@
       <groupId>com.github.marschall</groupId>
       <artifactId>jfr-ejb</artifactId>
     </dependency>
+    <dependency>
+      <groupId>com.github.marschall</groupId>
+      <artifactId>jfr-servlet</artifactId>
+      <scope>runtime</scope>
+    </dependency>
   </dependencies>
   
 
