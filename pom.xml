@@ -137,7 +137,7 @@
       <dependency>
         <groupId>com.github.marschall</groupId>
         <artifactId>jfr-jdbc</artifactId>
-        <version>0.3.0</version>
+        <version>0.4.0</version>
       </dependency>
       <dependency>
         <groupId>com.github.marschall</groupId>
