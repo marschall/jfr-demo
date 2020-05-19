@@ -45,7 +45,7 @@
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-framework-bom</artifactId>
-        <version>5.2.5.RELEASE</version>
+        <version>5.2.6.RELEASE</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -126,7 +126,7 @@
       <dependency>
         <groupId>org.junit</groupId>
         <artifactId>junit-bom</artifactId>
-        <version>5.6.1</version>
+        <version>5.6.2</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -229,8 +229,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <hibernate.version>5.4.13.Final</hibernate.version>
-    <log4j.version>2.13.1</log4j.version>
+    <hibernate.version>5.4.16.Final</hibernate.version>
+    <log4j.version>2.13.3</log4j.version>
   </properties>
 
   <modules>
