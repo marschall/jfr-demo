@@ -17,7 +17,7 @@ run the Maven demo
 mvn -pl jfr-demo -am clean test
 ```
 
-run the Web demo
+run the Web demo http://127.0.0.1:8080/
 
 ```
 mvn -pl jfr-demo-web -am jetty:run
@@ -26,16 +26,8 @@ mvn -pl jfr-demo-web -am jetty:run
 dumping
 
 ```
-jcmd 99776 JFR.dump filename=dumped.jfr
-```
-
-the advertised
-
-```
 jcmd 99776 JFR.dump name=1
 ```
-
-does not work because of [JDK-8220657](https://bugs.openjdk.java.net/browse/JDK-8220657)
 
 
 ## Running JFR in General
