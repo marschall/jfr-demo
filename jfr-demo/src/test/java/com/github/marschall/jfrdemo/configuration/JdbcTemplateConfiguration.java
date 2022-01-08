@@ -11,8 +11,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
-import com.github.marschall.jfrjdbctemplate.JfrJdbcOperations;
-import com.github.marschall.jfrjdbctemplate.JfrNamedParameterJdbcOperations;
+import com.github.marschall.jfr.jdbctemplate.JfrJdbcOperations;
+import com.github.marschall.jfr.jdbctemplate.JfrNamedParameterJdbcOperations;
 
 @Configuration
 @Import(H2Configuration.class)

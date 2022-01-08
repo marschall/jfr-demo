@@ -12,7 +12,7 @@ import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.github.marschall.jfr.ejb.JfrInterceptor;
-import com.github.marschall.jfrjdbctemplate.JfrJdbcOperations;
+import com.github.marschall.jfr.jdbctemplate.JfrJdbcOperations;
 
 @Singleton
 @Interceptors(JfrInterceptor.class)

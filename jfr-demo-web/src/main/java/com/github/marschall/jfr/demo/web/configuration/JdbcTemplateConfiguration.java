@@ -10,7 +10,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 
-import com.github.marschall.jfrjdbctemplate.JfrJdbcOperations;
+import com.github.marschall.jfr.jdbctemplate.JfrJdbcOperations;
 
 @Configuration
 public class JdbcTemplateConfiguration {
