@@ -45,7 +45,7 @@
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-framework-bom</artifactId>
-        <version>5.3.14</version>
+        <version>5.3.15</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -53,13 +53,13 @@
       <dependency>
         <groupId>com.h2database</groupId>
         <artifactId>h2</artifactId>
-        <version>2.0.206</version>
+        <version>2.1.210</version>
       </dependency>
   
       <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-core</artifactId>
-        <version>5.6.3.Final</version>
+        <version>5.6.5.Final</version>
       </dependency>
 
       <dependency>
